@@ -50,10 +50,16 @@
   });
 
   function php_email_form_submit(thisForm, action, formData) {
+    const data = {};
+    formData.forEach((value, key) => data[key] = value);
+
     fetch(action, {
       method: 'POST',
-      body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
     })
     .then(response => {
       if( response.ok ) {
