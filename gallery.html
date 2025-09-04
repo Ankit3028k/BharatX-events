@@ -84,95 +84,105 @@
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
+      <div class="container">
 
-      <div class="container-fluid">
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5">
+          <h2>Gallery</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
 
-        <div class="row gy-4 justify-content-center">
+        <!-- Filter Tabs -->
+        <div class="gallery-filters text-center mb-5">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="food">Food</button>
+          <button class="filter-btn" data-filter="interior">Interior</button>
+          <button class="filter-btn" data-filter="events">Events</button>
+          <button class="filter-btn" data-filter="staff">Staff</button>
+        </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-1.webp" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+          <!-- Food Items -->
+          <div class="gallery-item food" data-category="food">
+            <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="Delicious Food">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-1.webp" class="glightbox" title="Delicious Food">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-2.webp" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <div class="gallery-item food large" data-category="food">
+            <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="Gourmet Cuisine">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-2.webp" class="glightbox" title="Gourmet Cuisine">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-3.webp" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <!-- Interior Items -->
+          <div class="gallery-item interior wide" data-category="interior">
+            <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="Beautiful Interior">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-3.webp" class="glightbox" title="Beautiful Interior">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-4.webp" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <div class="gallery-item interior" data-category="interior">
+            <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="Elegant Design">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-4.webp" class="glightbox" title="Elegant Design">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-5.webp" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <!-- Events Items -->
+          <div class="gallery-item events" data-category="events">
+            <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="Special Event">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-5.webp" class="glightbox" title="Special Event">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-6.webp" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <div class="gallery-item events tall" data-category="events">
+            <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="Event Celebration">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-6.webp" class="glightbox" title="Event Celebration">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-7.webp" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <!-- Staff Items -->
+          <div class="gallery-item staff" data-category="staff">
+            <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="Professional Staff">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-7.webp" class="glightbox" title="Professional Staff">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/events/gallery-8.webp" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
+          <div class="gallery-item staff" data-category="staff">
+            <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="Team Work">
+            <div class="gallery-overlay">
+              <a href="assets/img/events/gallery-8.webp" class="glightbox" title="Team Work">
+                <i class="bi bi-arrows-angle-expand"></i>
+              </a>
             </div>
-          </div><!-- End Gallery Item -->
+          </div>
 
         </div>
 
       </div>
-
     </section><!-- /Gallery Section -->
 
   </main>
