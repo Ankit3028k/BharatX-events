@@ -17,6 +17,7 @@
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Rubik",  sans-serif;
   --nav-font: "Kanit",  sans-serif;
+  text-transform:capitalize;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -2238,8 +2239,8 @@ section,
 }
 
 .call-to-action .stat-item .stat-icon {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   border-radius: 50%;
   display: flex;
@@ -2250,7 +2251,7 @@ section,
 }
 
 .call-to-action .stat-item .stat-icon i {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--accent-color);
 }
 
@@ -2263,7 +2264,7 @@ section,
 }
 
 .call-to-action .stat-item .stat-label {
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
