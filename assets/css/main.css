@@ -1586,7 +1586,7 @@ section,
 
 @media (max-width: 768px) {
   .featured-speakers .speaker-card.featured .speaker-image {
-    height: 250px;
+    height: 335px;
   }
 
   .featured-speakers .speaker-card.featured .speaker-content {
@@ -1710,7 +1710,7 @@ section,
 
 @media (max-width: 768px) {
   .featured-speakers .speaker-card.compact .speaker-image {
-    height: 250px;
+    height: 428px;
   }
 
   .featured-speakers .speaker-card.compact .speaker-content {
