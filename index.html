@@ -36,7 +36,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">BharatX Events</h1>
+        <img src="assets/img/logo.png" class="logo-image" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -45,7 +45,7 @@
           <li><a href="about.html">About</a></li>
           <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="birthday-details.html">Luxury Birthday Decor</a></li>
+              <li><a href="birthday-details.html">Luxury Decor</a></li>
               <li><a href="photography-videography.html">Photography & Videography</a></li>
               <li><a href="fog-pyro-entry.html">Fog Entry & Pyro Entry</a></li>
               <li><a href="baby-cart-entry.html">Baby Cart Entry</a></li>
@@ -204,19 +204,25 @@
     </section><!-- /Hero Section -->
 
     <!-- Intro Section -->
+
+     <!-- Section Title -->
+          <div class="container section-title">
+        <h2>Our Services</h2>
+       <h4>Transform Your Vision Into Unforgettable Experiences</h4>
+        </div>
     <section id="intro" class="intro section">
 
       <div class="container">
 
-        <div class="row g-4">
+        <!-- <div class="row g-4">
 
           <div class="col-lg-6">
             <div class="content">
-              <h2>Transform Your Vision Into Unforgettable Experiences</h2>
+              <h4>Transform Your Vision Into Unforgettable Experiences</h4>
               <p class="lead">At BharatX Events, we don't just plan events—we craft extraordinary moments that leave
                 lasting impressions. From intimate celebrations to grand corporate gatherings, our expert team brings
                 your vision to life with precision, creativity, and flawless execution</p>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.</p> -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.</p>
 
               <div class="stats-grid">
                 <div class="stat-item">
@@ -239,25 +245,25 @@
                   <div class="stat-label">Happy & Satisfied Clients
                   </div>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="cta-section">
+              <!-- <div class="cta-section">
                 <a href="#" class="btn btn-primary">Get Your Free Consultation</a>
                 <a href="#" class="btn btn-outline">View Our Portfolio</a>
-              </div>
-            </div>
+              </div> -->
+            <!-- </div>
           </div>
 
           <div class="col-lg-6">
             <div class="visual-section">
               <div class="image-wrapper">
                 <img src="assets/img/events/showcase-5.webp" alt="Tech Summit" class="img-fluid">
-                <div class="gradient-overlay"></div>
+                <div class="gradient-overlay"></div> -->
                 <!-- <div class="floating-badge">
                   <i class="bi bi-calendar-event"></i>
                   <span>March 15-17, 2026</span>
                 </div> -->
-              </div>
+              <!-- </div>
 
               <div class="highlight-cards">
                 <div class="highlight-card">
@@ -276,7 +282,149 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
+
+        <!-- Add Bootstrap Icons CSS in head if not already included -->
+<!-- Include Bootstrap Icons CSS once in your page head -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+  <style>
+    .card {
+      position: relative;
+      z-index: 1;
+      background-color: #fff;
+      border: 1px solid #f87500;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+ .card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(53, 51, 51, 0.853); /* default orange overlay */
+  border-radius: 8px;
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover::before {
+  background: transparent; /* semi-transparent red on hover */
+}
+
+    /* Hide icon on card hover */
+.card:hover .card-icon  {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+    .card * {
+      position: relative;
+      z-index: 1;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(248,117,0,0.7);
+      z-index: 10;
+    }
+    .card-icon {
+      font-size: 60px;
+      color: #f87500;
+      margin-bottom: 15px;
+    }
+    a.card-link {
+      text-decoration: none;
+      color:#f87500;
+      font-weight: bold;
+      font-size: 16px;
+      display: block;
+    }
+    /* Soft style for logo image */
+.logo-image {
+max-width: 140px;
+border-radius: 50%;
+filter: drop-shadow(0 0 10px #f87500) brightness(1.1);
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+.logo-image:hover {
+/* transform: rotate(15deg) scale(1.1); */
+filter: drop-shadow(0 0 15px crimson) brightness(1.2);
+}
+
+
+
+    @media (max-width: 768px) {
+      div[style*="flex: 1 1 calc(33.333% - 13.33px)"], div[style*="flex: 1 1 calc(25% - 15px)"] {
+        flex: 1 1 100% !important;
+      }
+    }
+  </style>
+
+  <!-- First Row: 3 items -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px;">
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-gem card-icon" aria-hidden="true"></i>
+      <a href="birthday-details.html" class="card-link">Luxury Decor</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-camera-video card-icon" aria-hidden="true"></i>
+      <a href="photography-videography.html" class="card-link">Photography &amp; Videography</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-cloud-fog2 card-icon" aria-hidden="true"></i>
+      <a href="fog-pyro-entry.html" class="card-link">Fog Entry &amp; Pyro Entry</a>
+    </div>
+  </div>
+
+  <!-- Second Row: 3 items -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px;">
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://cdn.pixabay.com/photo/2021/04/16/15/49/baby-stroller-6185153_960_720.jpg');">
+      <i class="bi bi-basket3 card-icon" aria-hidden="true"></i>
+      <a href="baby-cart-entry.html" class="card-link">Baby Cart Entry</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://images.unsplash.com/photo-1486308510493-c6f3a68b9dd7?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-arrows-move card-icon" aria-hidden="true"></i>
+      <a href="mirror-ramp-entry.html" class="card-link">Mirror Ramp Entry</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(33.333% - 13.33px); background-image: url('https://cdn.pixabay.com/photo/2016/12/06/09/30/gift-1888168_960_720.jpg');">
+      <i class="bi bi-gift card-icon" aria-hidden="true"></i>
+      <a href="return-gift-hampers.html" class="card-link">Return Gift Hampers</a>
+    </div>
+  </div>
+
+  <!-- Third Row: 4 items -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+    <div class="card" style="flex: 1 1 calc(25% - 15px); background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-geo-alt-fill card-icon" aria-hidden="true"></i>
+      <a href="destination-service.html" class="card-link">Destination Service</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(25% - 15px); background-image: url('https://images.unsplash.com/photo-1556745828-8b1113d96416?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-building card-icon" aria-hidden="true"></i>
+      <a href="corporate-events.html" class="card-link">Corporate Events</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(25% - 15px); background-image: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-heart card-icon" aria-hidden="true"></i>
+      <a href="wedding-details.html" class="card-link">Wedding &amp; Engagement</a>
+    </div>
+    <div class="card" style="flex: 1 1 calc(25% - 15px); background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80');">
+      <i class="bi bi-stars card-icon" aria-hidden="true"></i>
+      <a href="naming-ceremony-details.html" class="card-link">Naming Ceremony</a>
+    </div>
+  </div>
+</div>
+
+
 
         <div class="founder-quote-slider swiper">
           <div class="swiper-wrapper">
@@ -352,9 +500,9 @@
       <div class="container">
 
         <!-- Section Title -->
-        <div class="section-title text-center mb-5">
-          <h3>Gallery</h3>
-          <p>From intimate family celebrations to grand-scale productions, our gallery captures the magic we’ve created. Explore moments from:</p>
+          <div class="container section-title">
+        <h2>Gallery</h2>
+        <p>From intimate family celebrations to grand-scale productions, our gallery captures the magic we’ve created. Explore moments from:</p>
         </div>
 
         <!-- Filter Tabs -->
@@ -456,7 +604,7 @@
       <!-- Section Title -->
       <div class="container section-title">
         <h2>Our Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -691,7 +839,7 @@
         </div>
 
         <!-- Quote Section -->
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
           <div class="col-lg-8 mx-auto">
             <div class="speaker-quote">
               <blockquote>
@@ -707,7 +855,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -1040,7 +1188,7 @@
     </section> -->
 
     <!-- Sponsors Section -->
-    <section id="sponsors" class="sponsors section">
+    <!-- <section id="sponsors" class="sponsors section">
 
       <div class="container">
 
@@ -1048,41 +1196,41 @@
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-5.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-6.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
+          <!-- <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-7.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/clients-8.webp" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-        </div>
+        <!-- </div>
 
       </div>
 
-    </section>
+    </section> -->
     <!-- /Sponsors Section -->
 
     <!-- Call To Action Section -->
@@ -1355,7 +1503,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="testimonial-header">
-                  <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid" loading="lazy">
+                  <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy">
                   <div class="rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -1426,14 +1574,13 @@
             <li><a href="about.html">About us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="terms.html">Terms of service</a></li>
-            <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="birthday-details.html">Luxury Birthday Decor</a></li>
+            <li><a href="birthday-details.html">Luxury Decor</a></li>
             <li><a href="photography-videography.html">Photography & Videography</a></li>
             <li><a href="fog-pyro-entry.html">Fog Entry & Pyro Entry</a></li>
             <li><a href="baby-cart-entry.html">Baby Cart Entry</a></li>
