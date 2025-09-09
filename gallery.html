@@ -1,191 +1,856 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Captured Moments - BharatX Events Gallery | Indian Celebrations & Events
+    </title>
+    <meta
+      name="description"
+      content="Discover captured moments from BharatX Events - stunning photography of Indian weddings, birthdays, namkaran ceremonies, and corporate events. Every frame tells a beautiful story."
+    />
+    <meta
+      name="keywords"
+      content="BharatX Events, Indian event gallery, wedding photos, birthday celebrations, namkaran ceremony, corporate events, traditional Indian decorations"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>BharatX Events - Gallery</title>
-  <meta name="description" content="Explore the gallery of BharatX Events, showcasing the beautiful moments from our past events.">
-  <meta name="keywords" content="BharatX Events, event gallery, event photos, mehfils, birthday parties, engagement parties, wedding events">
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Custom Gallery Styles -->
+    <style>
+      /* Enhanced Gallery Styles */
+      .gallery-hero-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+        overflow: hidden;
+      }
 
-</head>
+      .gallery-hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ff6b35" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffc107" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+        z-index: 1;
+      }
 
-<body class="about-page">
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      .floating-image {
+        animation: float 6s ease-in-out infinite;
+        transition: transform 0.3s ease;
+      }
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" class="logo-image" alt="" loading="lazy">
-      </a>
+      .floating-image:hover {
+        transform: scale(1.05) !important;
+      }
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="birthday-details.html">Luxury Decor</a></li>
-              <li><a href="photography-videography.html">Photography & Videography</a></li>
-              <li><a href="fog-pyro-entry.html">Fog Entry & Pyro Entry</a></li>
-              <li><a href="baby-cart-entry.html">Baby Cart Entry</a></li>
-              <li><a href="mirror-ramp-entry.html">Mirror Ramp Entry</a></li>
-              <li><a href="return-gift-hampers.html">Return Gift Hampers</a></li>
-              <li><a href="destination-service.html">Destination Service</a></li>
-              <li><a href="corporate-events.html">Corporate Events</a></li>
-              <li><a href="wedding-details.html">Wedding & Engagement</a></li>
-              <li><a href="naming-ceremony-details.html">Naming Ceremony</a></li>
-            </ul>
-          </li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
 
-      <a class="btn-getstarted" href="contact.html">Book Event</a>
+      .gallery-nav-btn {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 50px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
 
-    </div>
-  </header>
-  <main class="main">
+      .gallery-nav-btn:hover,
+      .gallery-nav-btn.active {
+        background: #ff6b35;
+        color: white;
+        border-color: #ff6b35;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+      }
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/events/showcase-9.webp);">
-      <div class="container position-relative">
-        <h1>Gallery</h1>
-        <p>A Glimpse of Our Mehfils.</p>
-        <nav class="breadcrumbs">
-          <ol>
+      .gallery-item {
+        transition: all 0.3s ease;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          transparent 100%
+        );
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .category-tag {
+        background: rgba(255, 107, 53, 0.9);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .stat-item h3 {
+        background: linear-gradient(45deg, #ff6b35, #ffc107);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Responsive Improvements */
+      @media (max-width: 768px) {
+        .hero-stats .col-4 {
+          margin-bottom: 1rem;
+        }
+
+        .gallery-nav-btn {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .display-4 {
+          font-size: 2.5rem;
+        }
+
+        .display-5 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .min-vh-100 {
+          min-height: 80vh;
+        }
+
+        .gallery-hero-section {
+          padding: 2rem 0;
+        }
+
+        .hero-image-grid {
+          margin-top: 2rem;
+        }
+      }
+
+      /* Loading Animation */
+      .spin {
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Enhanced Modal Styles */
+      .modal-content {
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+      }
+
+      .modal-overlay-info {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          transparent 100%
+        );
+      }
+    </style>
+  </head>
+
+  <body class="gallery-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="BharatX Events Logo" />
+          <!-- <h1 class="sitename">BharatX Events</h1> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Gallery</li>
-          </ol>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="services.html"
+                ><span>Services</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="wedding-details.html">Wedding & Engagement</a></li>
+                <li><a href="birthday-details.html">Birthday Parties</a></li>
+                <li>
+                  <a href="naming-ceremony-details.html">Naming Ceremony</a>
+                </li>
+                <li><a href="corporate-events.html">Corporate Events</a></li>
+                <li>
+                  <a href="photography-videography.html"
+                    >Photography & Videography</a
+                  >
+                </li>
+                <li>
+                  <a href="fog-pyro-entry.html">Fog Entry & Pyro Entry</a>
+                </li>
+                <li><a href="baby-cart-entry.html">Baby Cart Entry</a></li>
+                <li><a href="mirror-ramp-entry.html">Mirror Ramp Entry</a></li>
+                <li>
+                  <a href="return-gift-hampers.html">Return Gift Hampers</a>
+                </li>
+                <li>
+                  <a href="destination-service.html">Destination Service</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
+        <a class="btn-getstarted" href="contact.html">Book Event</a>
       </div>
-    </div><!-- End Page Title -->
+    </header>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-      <div class="container">
-
-        <!-- Section Title -->
-        <div class="section-title text-center mb-5">
-          <p>From intimate family celebrations to grand-scale productions, our gallery captures the magic we’ve created. Explore moments from:</p>
+    <main class="main">
+      <!-- Hero Gallery Section -->
+      <main class="main">
+      <!-- Hero Gallery Section -->
+      <div class="gallery-hero-section" style="
+          background: linear-gradient(
+              135deg,
+              rgba(255, 107, 53, 0.9),
+              rgba(255, 193, 7, 0.9)
+            ),
+            url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');
+          background-size: cover;
+          background-position: center;
+        ">
+        <div class="container position-relative">
+          <div class="row align-items-center min-vh-100 py-5">
+            <div class="col-lg-8 mx-auto text-center text-white">
+              <div class="gallery-hero-content">
+                <span class="gallery-badge">
+                  <i class="bi bi-camera-fill me-2"></i>
+                  Premium Event Gallery
+                </span>
+                <h1 class="display-2 fw-bold mb-4">
+                  Capturing <span class="text-warning">Magical</span> Moments
+                </h1>
+                <p class="lead fs-4 mb-5">
+                  Journey through our curated collection of India's most
+                  beautiful celebrations, where tradition meets modern elegance
+                  in every frame.
+                </p>
+                <div class="gallery-stats row g-4 mb-5">
+                  <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                      <h3 class="display-6 fw-bold text-warning">500+</h3>
+                      <p class="mb-0">Events Captured</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                      <h3 class="display-6 fw-bold text-warning">50K+</h3>
+                      <p class="mb-0">Photos Taken</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                      <h3 class="display-6 fw-bold text-warning">100+</h3>
+                      <p class="mb-0">Happy Families</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                      <h3 class="display-6 fw-bold text-warning">5+</h3>
+                      <p class="mb-0">Years Experience</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="#gallery-showcase" class="btn btn-warning btn-lg px-5 py-3 rounded-pill">
+                  <i class="bi bi-arrow-down-circle me-2"></i>
+                  Explore Gallery
+                </a>
+              </div>
+            </div>
+          </div>
+          <nav class="breadcrumbs position-absolute bottom-0 start-0 mb-4">
+            <ol class="mb-0">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li class="text-white">Gallery</li>
+            </ol>
+          </nav>
         </div>
-
-        <!-- Filter Tabs -->
-        <div class="gallery-filters text-center mb-5">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="birthday">Birthday Mehfils</button>
-          <button class="filter-btn" data-filter="engagement">Engagement Mehfils</button>
-          <button class="filter-btn" data-filter="wedding">Wedding Mehfils</button>
-          <button class="filter-btn" data-filter="naming-ceremony">Naming Ceremonies</button>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-
-          <!-- Birthday Items -->
-          <div class="gallery-item birthday" data-category="birthday">
-            <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="A delicious platter of food at a birthday mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-1.webp" class="glightbox" title="A delicious platter of food at a birthday mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item birthday large" data-category="birthday">
-            <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="A gourmet dish served at a birthday mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-2.webp" class="glightbox" title="A gourmet dish served at a birthday mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Engagement Items -->
-          <div class="gallery-item engagement wide" data-category="engagement">
-            <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="Beautiful interior decoration for an engagement mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-3.webp" class="glightbox" title="Beautiful interior decoration for an engagement mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item engagement" data-category="engagement">
-            <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="Elegant design and decoration for an engagement mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-4.webp" class="glightbox" title="Elegant design and decoration for an engagement mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Wedding Items -->
-          <div class="gallery-item wedding" data-category="wedding">
-            <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="A special moment from a wedding event." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-5.webp" class="glightbox" title="A special moment from a wedding event.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item wedding tall" data-category="wedding">
-            <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="A grand celebration at a wedding event." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-6.webp" class="glightbox" title="A grand celebration at a wedding event.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Naming Ceremony Items -->
-          <div class="gallery-item naming-ceremony" data-category="naming-ceremony">
-            <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="Our professional staff at a naming ceremony." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-7.webp" class="glightbox" title="Our professional staff at a naming ceremony.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item naming-ceremony" data-category="naming-ceremony">
-            <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="Our team working together at a naming ceremony." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-8.webp" class="glightbox" title="Our team working together at a naming ceremony.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section><!-- /Gallery Section -->
+      <!-- End Hero Gallery Section -->
 
-  </main>
+      <!-- Gallery Showcase Section -->
+      <section id="gallery-showcase" class="gallery-showcase section py-5">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+              <span class="section-badge">
+                <i class="bi bi-images me-2"></i>
+                Our Portfolio
+              </span>
+              <h2 class="display-4 fw-bold mb-4">
+                Celebrating <span class="text-primary">Indian</span> Traditions
+              </h2>
+              <p class="lead text-muted">
+                From intimate family celebrations to grand-scale productions,
+                our gallery captures the essence of Indian culture and the magic
+                we create for every special moment.
+              </p>
+            </div>
+          </div>
 
-   <footer id="footer" class="footer position-relative dark-background">
+          <!-- Interactive Filter Navigation -->
+          <div class="gallery-navigation mb-5">
+            <div class="row g-3">
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn active" data-filter="all">
+                  <i class="bi bi-grid-3x3-gap-fill"></i>
+                  <span>All Events</span>
+                  <small>150+ Photos</small>
+                </button>
+              </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn" data-filter="wedding">
+                  <i class="bi bi-heart-fill"></i>
+                  <span>Weddings</span>
+                  <small>45+ Photos</small>
+                </button>
+              </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn" data-filter="birthday">
+                  <i class="bi bi-gift-fill"></i>
+                  <span>Birthdays</span>
+                  <small>35+ Photos</small>
+                </button>
+              </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn" data-filter="naming">
+                  <i class="bi bi-star-fill"></i>
+                  <span>Namkaran</span>
+                  <small>25+ Photos</small>
+                </button>
+              </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn" data-filter="corporate">
+                  <i class="bi bi-building"></i>
+                  <span>Corporate</span>
+                  <small>30+ Photos</small>
+                </button>
+              </div>
+              <div class="col-lg-2 col-md-4 col-6">
+                <button class="gallery-nav-btn" data-filter="special">
+                  <i class="bi bi-camera-fill"></i>
+                  <span>Special</span>
+                  <small>15+ Photos</small>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creative Masonry Gallery Grid -->
+          <div class="creative-gallery-grid" id="gallery-container">
+            <!-- Wedding Gallery Items -->
+            <div class="gallery-item large" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Traditional Indian Wedding Mandap with Marigold Decorations" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Royal Wedding Mandap</h4>
+                  <p>Traditional ceremony setup with marigold decorations</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item medium" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Mehndi Ceremony Decoration with Traditional Elements" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Mehndi Celebration</h4>
+                  <p>Colorful pre-wedding festivities with traditional decor</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item small" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Wedding Reception Stage with Traditional Lighting" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Grand Reception</h4>
+                  <p>Elegant celebration venue with traditional lighting</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Birthday Gallery Items -->
+            <div class="gallery-item medium" data-category="birthday">
+              <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Luxury Birthday Cake Table Setup" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Luxury Cake Display</h4>
+                  <p>Instagram-worthy birthday cake table setup</p>
+                  <span class="category-tag">Birthday</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item large" data-category="birthday">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f29c8d8d4f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Royal Rajasthani Theme Birthday Party" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Royal Rajasthani Theme</h4>
+                  <p>Majestic traditional birthday celebration</p>
+                  <span class="category-tag">Birthday</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Namkaran Gallery Items -->
+            <div class="gallery-item small" data-category="naming">
+              <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Traditional Namkaran Rangoli Setup" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Sacred Rangoli Design</h4>
+                  <p>Traditional colorful patterns for naming ceremony</p>
+                  <span class="category-tag">Namkaran</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item medium" data-category="naming">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Baby Cradle Decoration with Flowers" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Decorated Baby Cradle</h4>
+                  <p>Beautiful traditional cradle with floral decorations</p>
+                  <span class="category-tag">Namkaran</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corporate Gallery Items -->
+            <div class="gallery-item large" data-category="corporate">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Corporate Award Ceremony Stage Setup" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Award Ceremony</h4>
+                  <p>Prestigious corporate recognition event</p>
+                  <span class="category-tag">Corporate</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item small" data-category="corporate">
+              <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Corporate Trade Show Exhibition Setup" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Trade Exhibition</h4>
+                  <p>Professional industry showcase event</p>
+                  <span class="category-tag">Corporate</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Special Events Gallery Items -->
+            <div class="gallery-item medium" data-category="special">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Professional Event Photography Session" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Professional Photography</h4>
+                  <p>Capturing precious moments with cinematic quality</p>
+                  <span class="category-tag">Special</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item small" data-category="special">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Spectacular Fog Entry Effect" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Spectacular Fog Entry</h4>
+                  <p>Professional fog and pyrotechnic effects</p>
+                  <span class="category-tag">Special</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Wedding Items -->
+            <div class="gallery-item medium" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Bridal Entry Decoration" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Bridal Entry</h4>
+                  <p>Magical entrance decoration</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item small" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Haldi Ceremony" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Haldi Ceremony</h4>
+                  <p>Traditional turmeric celebration</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Birthday Items -->
+            <div class="gallery-item large" data-category="birthday">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Creative Birthday Balloon Installation" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Balloon Art Installation</h4>
+                  <p>Creative balloon artistry for memorable celebrations</p>
+                  <span class="category-tag">Birthday</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Namkaran Items -->
+            <div class="gallery-item small" data-category="naming">
+              <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Traditional Kalash Arrangement for Namkaran" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Sacred Kalash Setup</h4>
+                  <p>Traditional ritual elements for naming ceremony</p>
+                  <span class="category-tag">Namkaran</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Corporate Items -->
+            <div class="gallery-item medium" data-category="corporate">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Corporate Gala Dinner Setup" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Corporate Gala</h4>
+                  <p>Elegant business celebration and networking event</p>
+                  <span class="category-tag">Corporate</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Special Items -->
+            <div class="gallery-item small" data-category="special">
+              <img src="https://images.unsplash.com/photo-1606115915090-be18fea23ec7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Traditional Marigold Flower Decorations" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Marigold Arrangements</h4>
+                  <p>Traditional Indian flower decorations</p>
+                  <span class="category-tag">Special</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- More Wedding Items -->
+            <div class="gallery-item medium" data-category="wedding">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Elegant Wedding Reception Hall" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Reception Hall</h4>
+                  <p>Elegant wedding reception venue setup</p>
+                  <span class="category-tag">Wedding</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- More Birthday Items -->
+            <div class="gallery-item small" data-category="birthday">
+              <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Bollywood Theme Birthday Party" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h4>Bollywood Theme Party</h4>
+                  <p>Glamorous filmi-style birthday celebration</p>
+                  <span class="category-tag">Birthday</span>
+                </div>
+                <div class="overlay-actions">
+                  <button class="gallery-zoom" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                    <i class="bi bi-zoom-in"></i>
+                  </button>
+                  <button class="gallery-share">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load More Button -->
+          <div class="text-center mt-5">
+            <button class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill" id="loadMoreBtn">
+              <i class="bi bi-plus-circle me-2"></i>
+              Load More Photos
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Modal -->
+      <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 position-relative">
+              <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+              <img src="" alt="" class="img-fluid w-100 rounded" id="modalImage">
+              <div class="modal-overlay-info position-absolute bottom-0 start-0 end-0 p-4 text-white">
+                <h5 id="modalTitle"></h5>
+                <p id="modalDescription" class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+      <!-- Gallery Modal -->
+      <div
+        class="modal fade"
+        id="galleryModal"
+        tabindex="-1"
+        aria-labelledby="galleryModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 position-relative">
+              <button
+                type="button"
+                class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <img
+                src=""
+                alt=""
+                class="img-fluid w-100 rounded"
+                id="modalImage"
+              />
+              <div
+                class="modal-overlay-info position-absolute bottom-0 start-0 end-0 p-4 text-white"
+              >
+                <h5 id="modalTitle"></h5>
+                <p id="modalDescription" class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+     <footer id="footer" class="footer position-relative dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -194,18 +859,21 @@
             <span class="sitename">BharatX Events</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>No matter the occasion—birthday, engagement, wedding, naming ceremony, or corporate event—BharatX Events is here to make it truly special.
-</p>
+            <p>No matter the occasion—birthday, engagement, wedding, naming ceremony, or corporate event—BharatX Events
+              is here to make it truly special.
+            </p>
             <p>Nx one, tower t3, b-107, Noida Extention</p>
-            <p class="mt-3"><strong>Phone:</strong><a href="tel:9310804776" class="mt-3"><span>+91-9310804776</span></a> </p>
-           <p><strong>Email:</strong><a href="mailto:bharatxevents@gmail.com" class="mt-3"> <span>bharatxevents@gmail.com</span></a> </p>
+            <p class="mt-3"><strong>Phone:</strong><a href="tel:9310804776" class="mt-3"><span> +91-9310804776</span></a>
+            </p>
+            <p><strong>Email:</strong><a href="mailto:bharatxevents@gmail.com" class="mt-3">
+                <span> bharatxevents@gmail.com</span></a> </p>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
+          <!-- <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div> -->
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
@@ -222,7 +890,7 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="birthday-details.html">Luxury Birthday Decor</a></li>
+            <li><a href="birthday-details.html">Luxury Decor</a></li>
             <li><a href="photography-videography.html">Photography & Videography</a></li>
             <li><a href="fog-pyro-entry.html">Fog Entry & Pyro Entry</a></li>
             <li><a href="baby-cart-entry.html">Baby Cart Entry</a></li>
@@ -235,42 +903,156 @@
           </ul>
         </div>
 
-<div class="col-lg-4 col-md-6 footer-links">
-  <h4>Our Location</h4>
-  <iframe width="100%" height="300" style="border:0" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.329318205344!2d77.4318221742181!3d28.60098448488446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzAzLjUiTiA3N8KwMjYnMDMuOCJF!5e0!3m2!1sen!2sin!4v1725363223789!5m2!1sen!2sin"></iframe>
-</div>
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Our Location</h4>
+          <iframe width="100%" height="300" style="border:0" loading="lazy" allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.329318205344!2d77.4318221742181!3d28.60098448488446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzAzLjUiTiA3N8KwMjYnMDMuOCJF!5e0!3m2!1sen!2sin!4v1725363223789!5m2!1sen!2sin"></iframe>
+        </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> 
-        <strong class="px-1 sitename text-warning">BharatX Events</strong>
-         <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://www.bitspark.in/"><img class="copyright-img" src="https://www.bitspark.in/wp-content/uploads/2024/12/logo-white3.png" alt="logo" loading="lazy"></a>
-      </div>
-    </div>
+        <div class="container copyright text-center mt-4">
+          <p>© <span>Copyright</span>
+            <strong class="px-1 sitename text-warning">BharatX Events</strong>
+            <span>All Rights Reserved</span>
+          </p>
+          <div class="credits">
+            Designed by <a href="https://www.bitspark.in/"><img class="copyright-img"
+                src="https://www.bitspark.in/wp-content/uploads/2024/12/logo-white3.png" alt="Bit Spark Logo" loading="lazy"></a>
+          </div>
+        </div>
 
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Gallery JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Gallery filtering functionality
+        const filterButtons = document.querySelectorAll(".gallery-nav-btn");
+        const galleryItems = document.querySelectorAll(".gallery-item");
 
-</body>
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
 
+            // Update active button
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            // Filter gallery items
+            galleryItems.forEach((item) => {
+              if (
+                filter === "all" ||
+                item.getAttribute("data-category") === filter
+              ) {
+                item.style.display = "block";
+                item.style.animation = "fadeInUp 0.5s ease-in-out";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Modal functionality
+        const galleryZoomButtons = document.querySelectorAll(".gallery-zoom");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+
+        galleryZoomButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const galleryItem = this.closest(".gallery-item");
+            const img = galleryItem.querySelector("img");
+            const title = galleryItem.querySelector(
+              ".overlay-content h4"
+            ).textContent;
+            const description =
+              galleryItem.querySelector(".overlay-content p").textContent;
+
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+          });
+        });
+
+        // Load more functionality with animation
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener("click", function () {
+            // Add loading animation
+            const originalText = this.innerHTML;
+            this.innerHTML =
+              '<i class="bi bi-arrow-clockwise me-2 spin"></i>Loading More...';
+            this.disabled = true;
+
+            // Simulate loading delay
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.disabled = false;
+              // Here you would typically load more images from server
+              console.log("More moments loaded!");
+            }, 2000);
+          });
+        }
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Add staggered animation for gallery items on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }, index * 100);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Initially hide gallery items for animation
+        galleryItems.forEach((item, index) => {
+          item.style.opacity = "0";
+          item.style.transform = "translateY(30px)";
+          item.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(item);
+        });
+      });
+    </script>
+  </body>
 </html>
