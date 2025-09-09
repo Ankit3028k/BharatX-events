@@ -464,10 +464,13 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  border-top-left-radius: 10px; /* Added */
+  border-top-right-radius: 10px; /* Added */
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 60px; /* Increased */
+  padding-bottom: 30px; /* Added */
   border-top: 1px solid
     color-mix(in srgb, var(--default-color), transparent 90%);
 }
@@ -562,7 +565,7 @@ h6 {
 }
 
 .footer .copyright {
-  padding: 25px 0;
+  padding: 30px 0; /* Increased */
   border-top: 1px solid
     color-mix(in srgb, var(--default-color), transparent 90%);
 }
@@ -722,6 +725,7 @@ section,
 .section-title {
   text-align: center;
   padding-bottom: 60px;
+  padding-top: 60px;
   position: relative;
 }
 

@@ -250,4 +250,63 @@
     }
   });
 
+  /**
+   * Set active class on current page nav link
+   */
+  function setActiveNavLink() {
+    const navLinks = document.querySelectorAll('#navmenu a');
+    const currentPath = window.location.pathname.split('/').pop(); // Get the filename from the URL
+
+    navLinks.forEach(link => {
+      // Remove active class from all links first
+      link.classList.remove('active');
+
+      // Check if the link's href matches the current page's path
+      // Handle index.html specifically for root path
+      if (currentPath === '' || currentPath === 'index.html') {
+        if (link.getAttribute('href') === 'index.html') {
+          link.classList.add('active');
+        }
+      } else if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('load', setActiveNavLink);
+  document.addEventListener('DOMContentLoaded', setActiveNavLink); // Also run on DOMContentLoaded for faster activation
+
+  /**
+   * Lazy load background images
+   */
+  function lazyLoadBackgroundImages() {
+    const lazyBackgrounds = document.querySelectorAll('[data-background]');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            element.style.backgroundImage = `url(${element.dataset.background})`;
+            element.classList.add('loaded'); // Optional: Add a class for styling loaded backgrounds
+            observer.unobserve(element);
+          }
+        });
+      });
+
+      lazyBackgrounds.forEach(bg => {
+        observer.observe(bg);
+      });
+    } else {
+      // Fallback for browsers that don't support IntersectionObserver
+      lazyBackgrounds.forEach(bg => {
+        bg.style.backgroundImage = `url(${bg.dataset.background})`;
+        bg.classList.add('loaded');
+      });
+    }
+  }
+
+  window.addEventListener('load', lazyLoadBackgroundImages);
+  document.addEventListener('DOMContentLoaded', lazyLoadBackgroundImages); // Also run on DOMContentLoaded for faster activation
+
 })();
