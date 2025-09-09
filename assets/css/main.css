@@ -768,6 +768,49 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Service Cards Background Images
+--------------------------------------------------------------*/
+.service-card-luxury {
+  background-image: url("https://www.visionevents.in/wp-content/uploads/2022/05/LUXURY-BIRTHDAY-Vision-Events.jpg") !important;
+}
+
+.service-card-photography {
+  background-image: url("https://cdn-blog.superprof.com/blog_in/wp-content/uploads/2020/01/in-photo-photo-1.jpg") !important;
+}
+
+.service-card-fog {
+  background-image: url("https://i.ytimg.com/vi/yu8VjFJvdcQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXChaMA8=&rs=AOn4CLChSVQ3xfIoyTOtEB33I_8ySEfTdw") !important;
+}
+
+.service-card-baby-cart {
+  background-image: url("https://storage.googleapis.com/shy-pub/337348/1704680813127_SKU-0935_1.jpg") !important;
+}
+
+.service-card-mirror-ramp {
+  background-image: url("https://images.shaadisaga.com/shaadisaga_production/photos/pictures/003/919/901/new_medium/purple_tree_events.jpg?1653031302") !important;
+}
+
+.service-card-gift-hampers {
+  background-image: url("https://dispozable.in/cdn/shop/files/2jarpeacock.jpg?v=1754486162") !important;
+}
+
+.service-card-destination {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdakcGAj7X85-IV6JjKk8t2lzoVxDE0uGu5Q&s") !important;
+}
+
+.service-card-corporate {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBmGUlgwb-DwtVArJXosBz6icsptWpG4rGMQ&s") !important;
+}
+
+.service-card-wedding {
+  background-image: url("https://www.grandweddings.co.in/wp-content/uploads/2020/03/indian-wedding-stage-decoration-photos-magnificent-portrait-7-1170x777.jpg") !important;
+}
+
+.service-card-naming-ceremony {
+  background-image: url("https://cdn.togetherv.com/baby-girl-naming-ceremony-decor-1_1678082817.webp") !important;
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
