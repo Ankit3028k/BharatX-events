@@ -25,6 +25,76 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.65));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h5 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.filter-btn {
+  border: none;
+  background: #f3f3f3;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: #ff5a5f;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 90, 95, 0.3);
+}
+</style>
 
 </head>
 
@@ -82,106 +152,86 @@
     </div><!-- End Page Title -->
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-      <div class="container">
+   <!-- Gallery Section -->
+<!-- Gallery Section -->
+<section id="gallery" class="gallery section py-5">
+  <div class="container">
 
-        <!-- Section Title -->
-        <div class="section-title text-center mb-5">
-          <p>From intimate family celebrations to grand-scale productions, our gallery captures the magic we’ve created. Explore moments from:</p>
-        </div>
+    <div class="section-title text-center mb-5">
+      <h2 class="fw-bold mb-3" data-aos="fade-up">Our Gallery</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Magical Mehfils, unforgettable memories – browse our creative event moments ✨
+      </p>
+    </div>
 
-        <!-- Filter Tabs -->
-        <div class="gallery-filters text-center mb-5">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="birthday">Birthday Mehfils</button>
-          <button class="filter-btn" data-filter="engagement">Engagement Mehfils</button>
-          <button class="filter-btn" data-filter="wedding">Wedding Mehfils</button>
-          <button class="filter-btn" data-filter="naming-ceremony">Naming Ceremonies</button>
-        </div>
+    <div class="gallery-filters text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="birthday">Birthday</button>
+      <button class="filter-btn" data-filter="engagement">Engagement</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="naming-ceremony">Naming Ceremony</button>
+      <button class="filter-btn" data-filter="corporate">Corporate Event</button>
+    </div>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
+    <div class="gallery-grid">
 
-          <!-- Birthday Items -->
-          <div class="gallery-item birthday" data-category="birthday">
-            <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="A delicious platter of food at a birthday mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-1.webp" class="glightbox" title="A delicious platter of food at a birthday mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item birthday large" data-category="birthday">
-            <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="A gourmet dish served at a birthday mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-2.webp" class="glightbox" title="A gourmet dish served at a birthday mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Engagement Items -->
-          <div class="gallery-item engagement wide" data-category="engagement">
-            <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="Beautiful interior decoration for an engagement mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-3.webp" class="glightbox" title="Beautiful interior decoration for an engagement mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item engagement" data-category="engagement">
-            <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="Elegant design and decoration for an engagement mehfil." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-4.webp" class="glightbox" title="Elegant design and decoration for an engagement mehfil.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Wedding Items -->
-          <div class="gallery-item wedding" data-category="wedding">
-            <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="A special moment from a wedding event." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-5.webp" class="glightbox" title="A special moment from a wedding event.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item wedding tall" data-category="wedding">
-            <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="A grand celebration at a wedding event." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-6.webp" class="glightbox" title="A grand celebration at a wedding event.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Naming Ceremony Items -->
-          <div class="gallery-item naming-ceremony" data-category="naming-ceremony">
-            <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="Our professional staff at a naming ceremony." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-7.webp" class="glightbox" title="Our professional staff at a naming ceremony.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery-item naming-ceremony" data-category="naming-ceremony">
-            <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="Our team working together at a naming ceremony." loading="lazy">
-            <div class="gallery-overlay">
-              <a href="assets/img/events/gallery-8.webp" class="glightbox" title="Our team working together at a naming ceremony.">
-                <i class="bi bi-arrows-angle-expand"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
+      <!-- Birthday -->
+      <div class="gallery-item birthday" data-category="birthday" data-aos="fade-up">
+        <img src="assets/img/events/birthday.jpeg" alt="Vibrant Bollywood-style birthday décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Birthday Mehfil</h5></div>
       </div>
-    </section><!-- /Gallery Section -->
+      <div class="gallery-item birthday" data-category="birthday" data-aos="fade-up">
+        <img src="assets/img/events/birthday-decor.jpg" alt="Vibrant Bollywood-style birthday décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Birthday Mehfil</h5></div>
+      </div>
+
+      <!-- Engagement -->
+      <div class="gallery-item engagement wide" data-category="engagement" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/events/engagment.jpg" alt="Artistic engagement décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Engagement Mehfil</h5></div>
+      </div>
+
+      <!-- Wedding -->
+      <div class="gallery-item wedding tall" data-category="wedding" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/events/wedding-decor.jpg" alt="Ornate wedding props décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Wedding Mehfil</h5></div>
+      </div>
+      <div class="gallery-item wedding tall" data-category="wedding" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/events/wedding-entry.jpg" alt="Ornate wedding props décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Wedding Mehfil</h5></div>
+      </div>
+      <div class="gallery-item wedding tall" data-category="wedding" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/events/wedding.jpg" alt="Ornate wedding props décor" class="img-fluid">
+        <div class="gallery-overlay"><h5>Wedding Mehfil</h5></div>
+      </div>
+
+      <!-- Naming Ceremony -->
+      <div class="gallery-item naming-ceremony" data-category="naming-ceremony" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/events/naming.jpg" alt="Traditional naming ceremony decoration" class="img-fluid">
+        <div class="gallery-overlay"><h5>Naming Ceremony</h5></div>
+      </div>
+      <div class="gallery-item naming-ceremony" data-category="naming-ceremony" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/events/Naming-Ceremony-Decoration.webp" alt="Traditional naming ceremony decoration" class="img-fluid">
+        <div class="gallery-overlay"><h5>Naming Ceremony</h5></div>
+      </div>
+
+      <!-- Corporate Event -->
+      <div class="gallery-item corporate wide tall" data-category="corporate" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/events/corporate.jpg" alt="Corporate event decor with Bollywood flair" class="img-fluid">
+        <div class="gallery-overlay"><h5>Corporate Event</h5></div>
+      </div>
+      <div class="gallery-item corporate wide tall" data-category="corporate" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/events/corporate-event.avif" alt="Corporate event decor with Bollywood flair" class="img-fluid">
+        <div class="gallery-overlay"><h5>Corporate Event</h5></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- /Gallery Section -->
 
   </main>
 
